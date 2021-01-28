@@ -1,40 +1,25 @@
 # 派蒙病毒
+娱乐性的派蒙病毒。<br>
+*“诶嘿”*<br>
+*“诶嘿是什么意思啊？”*<br>
 
-#### 介绍
-娱乐性的派蒙病毒。
-“诶嘿”
-“诶嘿是什么意思啊？”
+### 食用方法：
+直接打开exe程序（中文语音，线性增长）
 
-#### 软件架构
-软件架构说明
+### 命令行参数运行：
+派蒙病毒 [-l] [语言] [-i] [增长方式]<br>
+派蒙病毒 -h&emsp;&emsp;&emsp;显示此帮助<br>
+派蒙病毒 -v&emsp;&emsp;&emsp;显示版本信息<br>
 
+#### 语言：
+zh 中文语音（默认）&ensp;&ensp;jp 日文语音<br>
+en 英文语音&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ko 韩文语音
 
-#### 安装教程
+#### 增长方式：
+linear 线性增长（默认）<br>
+index 指数增长
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### 例如：
+派蒙病毒 -l jp -i index&ensp;&ensp;&ensp;使用日文语音指数增长
 
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
- 
+两个参数可以只取其一，未规定的参数按照默认值执行！
