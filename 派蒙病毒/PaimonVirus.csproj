@@ -98,7 +98,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
-    <None Include="res\img\paimon2x.gif" />
     <None Include="res\WavPlayer.exe" />
     <None Include="res\wav\zh.wav" />
     <None Include="res\wav\ko.wav" />

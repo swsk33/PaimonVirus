@@ -106,6 +106,10 @@ namespace PaimonVirus
             }
         }
 
+        /// <summary>
+        /// 显示派蒙
+        /// </summary>
+        /// <param name="n">一次显示n个</param>
         private void ShowPaimon(int n)
         {
             for (int i = 0; i < n; i++)
