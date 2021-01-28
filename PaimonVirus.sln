@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaimonVirus", "派蒙病毒\PaimonVirus.csproj", "{E5CA57F4-5512-49B6-9C3D-5C104CFF288C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5CA57F4-5512-49B6-9C3D-5C104CFF288C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5CA57F4-5512-49B6-9C3D-5C104CFF288C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5CA57F4-5512-49B6-9C3D-5C104CFF288C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5CA57F4-5512-49B6-9C3D-5C104CFF288C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E4660D3-37C9-47DE-BC2F-23C8EE3622CF}
+	EndGlobalSection
+EndGlobal
