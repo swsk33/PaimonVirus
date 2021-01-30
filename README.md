@@ -3,6 +3,10 @@
 *“诶嘿”*<br>
 *“诶嘿是什么意思啊？”*<br>
 
+### 下载地址
+[本站下载](https://gitee.com/swsk33/PaimonVirus/releases)<br>
+[lanzou-提取码：2333](https://swsk33.lanzoui.com/b0br5s4ne)<br>
+
 ### 食用方法：
 直接打开exe程序（中文语音，线性增长）
 
