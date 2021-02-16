@@ -40,14 +40,14 @@ namespace PaimonVirus
             if (IsArrayContains(args, "-h"))
             {
                 AllocConsole();
-                Console.WriteLine("派蒙病毒 [版本 v1.0.0]\r\n\r\n食用方法：\r\n直接打开exe程序（中文语音，线性增长）\r\n\r\n命令行参数运行：\r\n派蒙病毒 [-l] [语言] [-i] [增长方式]\r\n派蒙病毒 -h   显示此帮助\r\n派蒙病毒 -v   显示版本信息\r\n\r\n语言：\r\nzh 中文语音（默认）     jp 日文语音\r\nen 英文语音             ko 韩文语音\r\n\r\n增长方式：\r\nlinear 线性增长（默认）\r\nindex 指数增长\r\n\r\n例如：\r\n派蒙病毒 -l jp -i index     使用日文语音指数增长\r\n\r\n两个参数可以只取其一，未规定的参数按照默认值执行！");
+                Console.WriteLine("派蒙病毒 [版本 v1.1.3]\r\n\r\n食用方法：\r\n直接打开exe程序（中文语音，线性增长）\r\n\r\n命令行参数运行：\r\n派蒙病毒 [-l] [语言] [-i] [增长方式]\r\n派蒙病毒 -h   显示此帮助\r\n派蒙病毒 -v   显示版本信息\r\n\r\n语言：\r\nzh 中文语音     jp 日文语音（默认）\r\nen 英文语音             ko 韩文语音\r\n\r\n增长方式：\r\nlinear 线性增长（默认）\r\nindex 指数增长\r\nrandom 随机增长\r\n\r\n例如：\r\n派蒙病毒 -l jp -i index     使用日文语音指数增长\r\n\r\n两个参数可以只取其一，未规定的参数按照默认值执行！");
                 Console.WriteLine("\r\n按任意键退出。");
                 _ = Console.ReadLine();
             }
             else if (IsArrayContains(args, "-v"))
             {
                 AllocConsole();
-                Console.WriteLine("派蒙病毒 [版本 v1.0.0]\r\n项目网址：https://gitee.com/swsk33/PaimonVirus\r\n娱乐性的派蒙病毒。\r\n“诶嘿”\r\n“诶嘿是什么意思啊？”");
+                Console.WriteLine("派蒙病毒 [版本 v1.1.3]\r\n项目网址：https://gitee.com/swsk33/PaimonVirus\r\n娱乐性的派蒙病毒。\r\n“诶嘿”\r\n“诶嘿是什么意思啊？”");
                 Console.WriteLine("\r\n按任意键退出。");
                 _ = Console.ReadLine();
             }
@@ -55,7 +55,7 @@ namespace PaimonVirus
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                string lang = "zh";
+                string lang = "jp";
                 string increase = "linear";
                 if (IsArrayContains(args, "-l"))
                 {

@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Threading;
 using System.Diagnostics;
+using System.Collections.Generic;
 
 namespace PaimonVirus
 {
@@ -10,13 +11,33 @@ namespace PaimonVirus
     {
         private static string TMP_PATH = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Temp\\";
         /// <summary>
+        /// 获取屏幕宽
+        /// </summary>
+        private static int width = Screen.PrimaryScreen.Bounds.Width;
+        /// <summary>
+        /// 获取屏幕高
+        /// </summary>
+        private static int height = Screen.PrimaryScreen.Bounds.Height;
+        /// <summary>
+        /// 每个窗口间隔
+        /// </summary>
+        private static int distance = 15;
+        /// <summary>
+        /// 最大窗口数量
+        /// </summary>
+        private static int max = (width / distance) * (height / distance);
+        /// <summary>
         /// 语言，中文zh，日文jp，英文en，韩文ko
         /// </summary>
-        private string lang = "zh";
+        private static string lang = "jp";
         /// <summary>
-        /// 增长方式，分为线性(linear)和指数(index)
+        /// 增长方式，分为线性(linear)、指数(index)和随机(random)
         /// </summary>
-        private string increase = "linear";
+        private static string increase = "linear";
+        /// <summary>
+        /// 储存位置的列表
+        /// </summary>
+        private static List<int[]> locations = new List<int[]>();
 
         /// <summary>
         /// 释放resx里面的普通类型文件
@@ -107,14 +128,50 @@ namespace PaimonVirus
         }
 
         /// <summary>
+        /// 计算并设定每个窗口位置（防止位置重叠）
+        /// </summary>
+        /// <param name="n">计算n次</param>
+        /// <returns></returns>
+        private void SetLocation(int n)
+        {
+            int x, y;
+            Random rand = new Random();
+            for (int i = 0; i < n; i++)
+            {
+                int[] point = new int[2];
+                x = rand.Next(0, width - 132);
+                y = rand.Next(0, height - 206);
+                for (int j = 0; j < locations.Count; j++)
+                {
+                    int[] eachPoint = locations[j];
+                    if (n > max)
+                    {
+                        break;
+                    }
+                    if (Math.Abs(x - eachPoint[0]) < distance && Math.Abs(y - eachPoint[1]) < distance)
+                    {
+                        SetLocation(n - locations.Count);
+                    }
+                }
+                point[0] = x;
+                point[1] = y;
+                locations.Add(point);
+            }
+        }
+
+        /// <summary>
         /// 显示派蒙
         /// </summary>
         /// <param name="n">一次显示n个</param>
         private void ShowPaimon(int n)
         {
+            locations.Clear();
+            SetLocation(n);
             for (int i = 0; i < n; i++)
             {
-                new Paimon().Show();
+                int[] eachPoint = locations[i];
+                new Paimon(eachPoint[0], eachPoint[1]).Show();
+                Application.DoEvents();
                 PlaySound(lang);
             }
         }
@@ -131,8 +188,8 @@ namespace PaimonVirus
 
         public Main(string lang, string increase)
         {
-            this.lang = lang;
-            this.increase = increase;
+            Main.lang = lang;
+            Main.increase = increase;
             ExtractNormalFileInResx(MainResource.WavPlayer, TMP_PATH + "WavPlayer.exe");
             ExtractAudioFileInResx(MainResource.zh, TMP_PATH + "zh.wav");
             ExtractAudioFileInResx(MainResource.jp, TMP_PATH + "jp.wav");
@@ -154,6 +211,10 @@ namespace PaimonVirus
                 else if (increase.Equals("index"))
                 {
                     n = n * 2;
+                }
+                else if (increase.Equals("random"))
+                {
+                    n = n + new Random().Next(0, 11);
                 }
                 else
                 {
