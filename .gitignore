@@ -1,3 +1,7 @@
-/派蒙病毒/bin/
-/派蒙病毒/obj/
-/.vs/
+/**/bin/
+/**/obj/
+/**/.vs/
+/**/FodyWeavers.xml
+/**/FodyWeavers.xsd
+/派蒙病毒/*.dll
+/packages/

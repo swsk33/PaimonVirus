@@ -1,5 +1,5 @@
 ﻿
-namespace PaimonVirus
+namespace Swsk33.PaimonVirus.Frame
 {
     partial class Paimon
     {
@@ -36,7 +36,7 @@ namespace PaimonVirus
             // 
             // BoxPaimon
             // 
-            this.BoxPaimon.Image = global::PaimonVirus.MainResource.paimon;
+            this.BoxPaimon.Image = global::Swsk33.PaimonVirus.MainResource.paimon;
             this.BoxPaimon.Location = new System.Drawing.Point(12, 12);
             this.BoxPaimon.Name = "BoxPaimon";
             this.BoxPaimon.Size = new System.Drawing.Size(132, 206);

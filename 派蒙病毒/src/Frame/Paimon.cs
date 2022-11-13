@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Threading;
 
-namespace PaimonVirus
+namespace Swsk33.PaimonVirus.Frame
 {
     public partial class Paimon : Form
     {

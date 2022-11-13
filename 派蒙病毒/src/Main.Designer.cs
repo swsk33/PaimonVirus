@@ -1,5 +1,5 @@
 ﻿
-namespace PaimonVirus
+namespace Swsk33.PaimonVirus
 {
     partial class Main
     {
