@@ -4,13 +4,13 @@ using Swsk33.PaimonVirus.Util;
 namespace Swsk33.PaimonVirus.Strategy.Impl
 {
 	/// <summary>
-	/// 诶嘿-中文语音
+	/// 诶嘿-日语语音
 	/// </summary>
-	public class EheZhAudioStrategy : AudioStrategy
+	public class EheJpAudioStrategy : AudioStrategy
 	{
 		public void PlayAudio()
 		{
-			AudioUtils.Play(CommonValue.TEMP_PATH + "zh.wav");
+			AudioUtils.Play(CommonValue.TEMP_PATH + "jp.wav");
 		}
 	}
 }
